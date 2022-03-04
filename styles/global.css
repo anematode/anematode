@@ -99,7 +99,7 @@ body > *:not(.copyright) {
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
-    font-family: Roboto, sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
     font-weight: normal;
 }
 
@@ -167,7 +167,6 @@ body {
 
 .autobiography {
     font-size: 24px;
-    font-weight: lighter;
     text-align: left;
 }
 
@@ -182,11 +181,16 @@ body {
     font-size: 36px;
 }
 
-.date-worked, .project-desc {
-    font-weight: lighter;
+.project > h2 {
+    margin: 0;
 }
 
-.project-desc {
+.date-worked, .project-desc {
+
+}
+
+.project-desc, .date-worked {
+    margin: 0;
     font-size: 20px;
 }
 
@@ -206,7 +210,7 @@ body {
 }
 
 .project {
-    margin: 10px;
+    margin: 10px 0;
     padding: 20px;
     max-width: 440px;
     background-color: white;
@@ -256,7 +260,7 @@ body {
 }
 
 .name {
-    font-family: Inconsolata, monospace;
+    font-family: Consolas, 'Liberation Mono', Menlo, monospace;
     color: var(--special-color);
 }
 

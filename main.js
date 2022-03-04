@@ -54,9 +54,10 @@ function loadProjectsAsync({ desc } = {desc: "long"}) {
   <a class="next" onclick="cycleSlides(this, 1)">&#10095;</a>`
 
       let html = `
-      <h2><a href="${proj.link}">${proj.name}</a></h2>
-      <h3 class="date-worked">${proj.date_worked}</h3>
+      <h2 class="project-link"><a href="${proj.link}">${proj.name}</a></h2>
+      <p class="date-worked">${proj.date_worked}</p>
       <p class="project-desc">${desc === "long" ? shortenLongDesc(proj.long_description, proj.link) : proj.short_description}</p>
+      <br>
       <div class="slideshow" style="aspect-ratio: ${proj.min_thumb_aspect ?? 0};">
       ${thumbs}
       ${proj.thumbs.length > 1 ? slideshowButtons : ''}
