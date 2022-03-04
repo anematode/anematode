@@ -1,0 +1,24 @@
+[
+  {
+    "name": "GAtM",
+    "short_description": "Rewrite of a Gunn High School math textbook by Peter Herreshoff",
+    "date_worked": "February 2019 – present",
+    "long_description": "One of my longest going projects, second only to Grapheme, the Geometric Approach to Matrices textbook (GAtM, for short) is a rewrite of an excellent textbook of the same name by former Gunn High School teacher Peter Herreshoff. The textbook amalgamates a variety of topics, including elementary group theory, matrices, set theory, and complex numbers. For many years it has ben used in the Analysis Honors math course, the advanced-lane math course for juniors, and my rewrite has been used since the 2020–2021 school year. The rewrite was originally focused on fixing errors in the original, but eventually developed into a more ambitious project of adding more figures, clarifying prose, and addressing other deficiencies. The textbook and answer key together comprise roughly 20,000 lines of LaTeX. I collaborated on the project with fellow Class of 2021 student Brandon Chung and continue to edit the textbook with current junior Yu-Ting Chang.\n",
+    "github_link": "https://github.com/Gunn-GAtM/gatm",
+    "link": "/projects/gatm/",
+    "thumb": "/assets/gatm_00000.png",
+    "thumbs": [ "/assets/gatm_00000.png", "/assets/gatm_00001.png", "/assets/gatm_00002.png", "/assets/gatm_00003.png", "/assets/gatm_00004.png", "/assets/gatm_00005.png" ],
+    "min_thumb_aspect": 1.46
+  },
+  {
+    "name": "Grapheme",
+    "short_description": "High-performance online graphing calculator backend",
+    "date_worked": "2017 – present",
+    "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna nunc, ultricies at condimentum quis, placerat eget velit. Mauris at dictum purus. Cras id ipsum et libero tempor pellentesque. Fusce sem orci, pulvinar quis metus vitae, viverra aliquam urna. Mauris finibus neque quis enim hendrerit suscipit. Aliquam tellus risus, mollis sit amet orci sit amet, fringilla lobortis odio. Aliquam ac metus a ligula elementum lobortis. Morbi finibus commodo diam non ultrices. Donec vulputate tellus non lectus fringilla, a tempus urna commodo. Vivamus efficitur nec ipsum et pellentesque. Vestibulum nec ligula a urna eleifend iaculis. Praesent bibendum neque dui, nec aliquet nibh consequat ut. Nulla et interdum mauris. Praesent id venenatis nibh. Maecenas elit odio, molestie mollis mattis vitae, lobortis ac nunc.\n\n",
+    "github_link": "https://github.com/anematode/grapheme",
+    "link": "/projects/grapheme/",
+    "thumb": "/assets/grapheme_00001.png",
+    "thumbs": [ "/assets/grapheme_00001.png" ],
+    "min_thumb_aspect": 1.2
+  }
+]
