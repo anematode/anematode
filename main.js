@@ -6,13 +6,28 @@ function cycleSlides(e, delta) {
   let c = slides.length
 
   let currentIndex = slides.indexOf(selected)
-  console.log(currentIndex)
   currentIndex = ((currentIndex + delta) % c + c) % c
-
-  console.log(currentIndex)
 
   slides.forEach(s => (s.classList.remove("shown-slide"), s.classList.add("hidden-slide")))
   slides[currentIndex].classList.add("shown-slide")
+}
+
+function shortenLongDesc(text, l) {
+  let chopped = text.slice(0, 300)
+
+  for (let i = chopped.length - 1; i >= 0; --i) {
+    if (chopped[i] === ' ') {
+      chopped = chopped.slice(0, i)
+      break
+    }
+  }
+
+  if (chopped.length < text.length) {
+    chopped += `<span class="chopped">...</span> `
+  }
+
+  chopped += `<a class="read-more" href="${l}">Read more »</span>`
+  return chopped
 }
 
 function loadProjectsAsync({ desc } = {desc: "long"}) {
@@ -41,7 +56,7 @@ function loadProjectsAsync({ desc } = {desc: "long"}) {
       let html = `
       <h2><a href="${proj.link}">${proj.name}</a></h2>
       <h3 class="date-worked">${proj.date_worked}</h3>
-      <p class="project-desc">${proj.short_description}</p>
+      <p class="project-desc">${desc === "long" ? shortenLongDesc(proj.long_description, proj.link) : proj.short_description}</p>
       <div class="slideshow" style="aspect-ratio: ${proj.min_thumb_aspect ?? 0};">
       ${thumbs}
       ${proj.thumbs.length > 1 ? slideshowButtons : ''}
@@ -75,7 +90,7 @@ var mainPages = {
     name: "Home",
     getHTML: () => {
       let html = `<p class="autobiography"><span class="hello">Hello! :)</span>
-I'm a college student out of the Bay Area pursuing a degree in computer science. Many of my projects also include elements of music, mathematics, and writing.</p>
+I'm a college student from the Bay Area pursuing a degree in computer science. Many of my projects also include elements of music, mathematics, and writing.</p>
       `
       html += getProjectsHTML({ desc: "short" })
       return html
@@ -85,7 +100,10 @@ I'm a college student out of the Bay Area pursuing a degree in computer science.
     url: "/projects",
     name: "Projects",
     getHTML: () => {
-      return ``
+      let html = `<p class="pheader">Projects</p>
+      `
+      html += getProjectsHTML({ desc: "long" })
+      return html
     }
   },
   "About": {
@@ -204,6 +222,10 @@ navObserver.observe(document.body)
 
 function show404() {
   document.body.innerHTML = html404
+}
+
+function definePage(name, details) {
+
 }
 
 function setPageLink(d) {

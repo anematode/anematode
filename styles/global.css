@@ -273,6 +273,13 @@ body {
     }
 }
 
+.pheader {
+    text-align: center;
+    font-size: 36px;
+    font-weight: lighter;
+    margin: 10;
+}
+
 @media only screen and (max-width: 675px) {
     .autobiography {
         font-size: 18px;
