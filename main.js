@@ -85,7 +85,7 @@ function getProjectsHTML(opts) {
   return `<div class="project-list"></div>`
 }
 
-var mainPages = {
+const mainPages = {
   "Home": {
     url: "/",
     name: "Home",
@@ -95,7 +95,8 @@ I'm a college student from the Bay Area pursuing a degree in computer science. M
       `
       html += getProjectsHTML({ desc: "short" })
       return html
-    }
+    },
+    isMain: true
   },
   "Projects": {
     url: "/projects",
@@ -105,14 +106,48 @@ I'm a college student from the Bay Area pursuing a degree in computer science. M
       `
       html += getProjectsHTML({ desc: "long" })
       return html
-    }
+    },
+    isMain: true
   },
   "About": {
     url: "/about",
     name: "About",
     getHTML: () => {
-      return ``
-    }
+      let html = `<p class="pheader">About Me</p>
+        <div class="about-me-wrapper">
+        <div class="about-me">
+        <p class="prose">
+        I'm Timothy Herchen, a freshman at <a href="https://foothill.edu/">Foothill College</a> in Los Altos Hills, CA.
+        I graduated from <a href="https://gunn.pausd.org/">Gunn High School</a> in Palo Alto, CA in 2021.
+        </p>
+        <p class="prose">
+        Most of my interests—programming, mathematics, music, writing—have been with me since I was young.
+        I especially love anywhere these interests intersect; most of my personal projects pull from at least two of these elements.
+        I've tinkered around with Scratch since about fifth grade and began seriously programming in the seventh grade.
+        Since then, I've become adept at JavaScript and Python, and proficient at C++, LaTeX, and Java.
+        Having wanted to return to systems programming for a while, I'm currently learning Rust and x86 assembly.
+        </p>
+        <p class="prose">
+        I took a break from self-studying math after ninth grade, but got back into it last year.
+        I'm currently studying real and complex analysis—it's amazing how much excellent supplementary content is available in the Internet age.
+        </p>
+        <p class="prose">
+        <a href="mailto:timothy.herchen@gmail.com">Email</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://www.youtube.com/channel/UCKm2xCXddmNg0dK6KSwJmkA">YouTube</a>&nbsp;&nbsp;&nbsp;
+        Discord: forevermilk#0001
+        </p>
+        </div>
+        <div class="photo-wrapper">
+        <img class="headshot" src="../assets/headshot.png" />
+        <p class="photo-caption">January 2022, <a href="https://www.google.com/maps/search/37.3202,+-122.1991">37°19'12.7"N 122°11'56.8"</a></p>
+        <p class="photo-credit">Credit: Brandon Chung</p>
+        </div>
+        </div>
+        `
+
+      return html
+    },
+    isMain: true
   },
   "GitHub": {
     url: "https://github.com/anematode",
@@ -120,7 +155,8 @@ I'm a college student from the Bay Area pursuing a degree in computer science. M
     target: "_blank",
     getHTML: () => {
       return ``
-    }
+    },
+    isMain: true
   }
 }
 
@@ -187,6 +223,7 @@ function loadCurrentPage() {
     let navHTML = ``
 
     for (const d of Object.values(mainPages)) {
+      if (d.isMain)
       navHTML += `<li class="nav-item">
                 <a class="nav-item-link" href="${d.url}" target="${d.target || ''}">${d.name}</a>
             </li>`
@@ -226,7 +263,7 @@ function show404() {
 }
 
 function definePage(name, details) {
-
+  mainPages[name] = details
 }
 
 function setPageLink(d) {
@@ -236,6 +273,30 @@ function setPageLink(d) {
       a.classList.add("nav-item-current-link")
     }
   })
+}
+
+function genHatnote(s) {
+  return `<p class="prose hatnote"><emph>${s}</emph></p>`
+}
+
+const templateRegex = /\{\{[^\n]+\}\}/g
+
+function substituteTemplates(s) {
+  // Recursively substitute templates
+  for (const match of s.matchAll(templateRegex)) {
+    //console.log(match)
+  }
+
+  return s
+}
+
+function genProse(s) {
+  // First process "templates"
+
+  s = substituteTemplates(s)
+  let lines = s.split('\n')
+
+  return lines.map(l => `<p class="prose">${l}</p>`).join('')
 }
 
 window.addEventListener("load", loadCurrentPage)

@@ -281,7 +281,7 @@ body {
     text-align: center;
     font-size: 36px;
     font-weight: lighter;
-    margin: 10;
+    margin: 5px;
 }
 
 @media only screen and (max-width: 675px) {
@@ -293,3 +293,64 @@ body {
         font-size: 14px;
     }
 }
+
+.about-me-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.headshot {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.about-me {
+    margin-right: 20px;
+    max-width: 60%;
+}
+
+.prose {
+    display: block;
+    font-size: 16px;
+}
+
+.photo-caption, .photo-credit {
+    text-align: center;
+    margin: 0;
+}
+
+.prose > a:visited, .photo-caption > a:visited, .photo-credit > a:visited {
+    color: blue;
+}
+
+.about-me-wrapper {
+    border-radius: 10px;
+    background-color: white;
+    padding: 15px;
+}
+
+@media only screen and (max-width: 800px) {
+    .about-me-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .photo-wrapper {
+        max-width: calc(min(80%, 400px));
+        margin: 0 auto;
+    }
+
+    .about-me {
+        max-width: 100%;
+        margin-right: 0;
+    }
+}
+
+.hatnote {
+    font-style: italic;
+}
+
