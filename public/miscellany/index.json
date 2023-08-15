@@ -1,0 +1,96 @@
+
+{
+  "projects": [
+    {
+      "title": "Solar System Simulator",
+      "year": 2016,
+      "description": "A simple solar system simulator written in JavaScript using three.js.",
+      "path": "/miscellany/solar-system",
+      "image": "/miscellany/solar-system/images/old.png"
+    },
+    {
+      "title": "Metronome",
+        "year": 2017,
+        "description": "A metronome written in JavaScript using the WebAudio API.",
+        "path": "/miscellany/metronome",
+        "image": "/miscellany/metronome/preview.png"
+    },
+    {
+      "title": "Polyrhythm Metronome",
+      "year": 2017,
+      "description": "A metronome for practicing polyrhythms using the WebAudio API.",
+      "path": "/miscellany/poly-metronome",
+      "image": "/miscellany/poly-metronome/preview.png"
+    },
+    {
+      "title": "Brainf— interpreter",
+      "year": 2017,
+      "description": "Step through Brainf— programs in your browser.",
+      "path": "/miscellany/brainfuck",
+      "image": "/miscellany/brainfuck/preview.png"
+    },
+    {
+      "title": "Polycubes",
+      "year": 2018,
+      "description": "Examine polycubes in the browser.",
+      "path": "/miscellany/polycubes",
+      "image": "/miscellany/polycubes/preview.png"
+    },
+    {
+      "title": "Solubility rules",
+      "year": 2018,
+      "description": "Test yourself on heuristics for whether a salt is water soluble. (Chemistry Honors 2018)",
+      "path": "/miscellany/solubility",
+      "image": "/miscellany/solubility/preview.png"
+    },
+    {
+      "title": "Complex fractals",
+      "year": 2017,
+      "description": "A short paean to Mandelbrot set–like fractals.",
+      "path": "/miscellany/mandelbrot-1",
+      "image": "/miscellany/mandelbrot-1/images/fractal3.png"
+    },
+    {
+      "title": "Mandelbrot set",
+      "year": 2017,
+        "description": "A short paean to the Mandelbrot set.",
+        "path": "/miscellany/mandelbrot-2",
+        "image": "/miscellany/mandelbrot-2/images/disk1.png"
+    },
+    {
+      "title": "Base–motif fractals",
+        "year": 2017,
+        "description": "An exposition and widget to generate \"base–motif\" fractals.",
+        "path": "/miscellany/base-motif",
+        "image": "/miscellany/base-motif/images/cesaro4c.png"
+    },
+    {
+      "title": "Lévy C curve",
+        "year": 2017,
+        "description": "A paean to the Lévy C curve.",
+        "path": "/miscellany/levy-c",
+        "image": "/miscellany/levy-c/images/levy8.png"
+    },
+    {
+      "title": "The goto statement",
+        "year": 2017,
+        "description": "A naïve, callow essay on the goto statement in C.",
+        "path": "/miscellany/goto",
+        "image": "/miscellany/goto/images/preview.png"
+    },
+    {
+      "title": "Temperament",
+      "year": 2017,
+      "description": "Unfinished observations on musical temperament.",
+        "path": "/miscellany/temperament",
+        "image": "/miscellany/temperament/images/preview.png"
+    },
+    {
+      "title": "Grapheme parse tree",
+      "year": 2021,
+      "description": "Parse tree for the Grapheme calculator.",
+      "path": "https://anematode.github.io/grapheme-math/demo/parse_tree/",
+      "image": "/miscellany/grapheme-parse-tree/images/preview.png"
+    }
+  ]
+}
