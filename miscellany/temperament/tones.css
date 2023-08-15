@@ -1,0 +1,14 @@
+.middle {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.staff-cf {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+.staff {
+	margin-right: 50px;
+}

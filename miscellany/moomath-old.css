@@ -1,0 +1,222 @@
+/**
+ * Authored by Brandon Chung (https://github.com/brandonsyc)
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+* {
+    font-family: "Open Sans";
+    font-weight: 100;
+}
+*::-webkit-scrollbar {
+    width: 10px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #999;
+}
+*::-webkit-scrollbar-track {
+    background-color: #ccc;
+}
+p,
+button,
+input[type=text],
+imput[type=number],
+label {
+    font-size: 15px;
+}
+p {
+    line-height: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+a {
+    color: #08b;
+    text-decoration: none;
+}
+strong,
+strong * {
+    font-weight: 900;
+}
+body {
+    margin: 0;
+}
+.first {
+    text-align: center;
+}
+.first h1 {
+    color: #096;
+    font-size: 50px;
+    margin-top: 100px;
+    letter-spacing: 20px;
+}
+.first p {
+    color: #999;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: -25px 0 50px 0;
+}
+.navigate div,
+.sticky div {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 720px;
+    width: 75%;
+}
+.navigate,
+.sticky {
+    background-color: #eee;
+    margin: auto;
+    padding: 25px;
+    width: calc(100% - 50px);
+}
+.navigate a,
+.sticky a {
+    color: #000;
+    flex-grow: 1;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    text-align: center;
+}
+.sticky {
+    position: fixed;
+    left: 50%;
+    opacity: 0;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 1;
+}
+.last {
+    background-color: #eee;
+    text-align: center;
+    margin: auto;
+    padding: 10px 25px;
+    width: calc(100% - 50px);
+}
+.last p {
+    font-size: 12px;
+    line-height: 24px;
+}
+.article {
+    margin: auto;
+    max-width: 910px;
+    padding: 25px;
+}
+figure {
+    margin: 50px 0;
+    text-align: center;
+}
+img {
+    margin: 25px 0;
+}
+img,
+.video {
+    border: 1px solid #000;
+    width: 50%;
+}
+pre {
+    background-color: #eee;
+    border: none !important;
+    overflow-x: auto;
+    padding: 25px !important;
+    max-width: 910px;
+}
+pre span {
+    font-family: Consolas, monospace !important;
+    font-size: 15px;
+    letter-spacing: 0px !important;
+}
+table {
+    background-color: #eee;
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+}
+td,
+th {
+    padding: 10px;
+}
+th {
+    font-weight: 900;
+}
+.header {
+    letter-spacing: 1px;
+    margin: 100px auto 0 auto;
+    max-width: 960px;
+    text-align: center;
+}
+.video {
+    margin: 50px auto;
+    padding-top: 50%;
+    position: relative;
+}
+.video iframe {
+    border: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.no {
+    border: none;
+}
+@media only screen and (max-width: 768px) {
+    img,
+    .video {
+        width: 75%;
+    }
+}
+hr {
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+.content {
+    margin: auto;
+    max-width: 910px;
+    padding: 25px;
+}
+label,
+input,
+button {
+    padding: 15px;
+    transition: 0.2s;
+}
+input:focus,
+button:focus {
+    outline: none;
+}
+input[type=radio] {
+    display: none;
+}
+input[type=radio]:checked+label {
+    background-color: #eee;
+}
+label {
+    line-height: 50px;
+    white-space: nowrap;
+}
+input[type=text],
+input[type=number],
+input[type=password] {
+    border: 1px solid #ccc;
+}
+input[type=text]:hover,
+input[type=number]:hover,
+input[type=password]:hover {
+    border: 1px solid #999;
+}
+button,
+input[type=submit] {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: none;
+}
+button:hover,
+input[type=submit]:hover {
+    background-color: #eee;
+}
+button:active,
+input[type=submit]:active {
+    border: 1px solid #999;
+}

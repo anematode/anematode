@@ -1,0 +1,47 @@
+
+{
+  "projects": [
+    {
+      "title": "Solar System Simulator",
+      "year": 2016,
+      "description": "A simple solar system simulator written in JavaScript using three.js.",
+      "path": "/miscellany/solar-system",
+      "image": "/miscellany/solar-system/images/old.png"
+    },
+    {
+      "title": "Metronome",
+      "year": 2017,
+      "description": "A metronome written in JavaScript using the WebAudio API.",
+      "path": "/miscellany/metronome",
+      "image": "/miscellany/metronome/preview.png"
+    },
+    {
+      "title": "Polyrhythm Metronome",
+      "year": 2017,
+      "description": "A metronome for practicing polyrhythms using the WebAudio API.",
+      "path": "/miscellany/poly-metronome",
+      "image": "/miscellany/poly-metronome/preview.png"
+    },
+    {
+      "title": "Brainf–– interpreter",
+      "year": 2017,
+      "description": "Step through Brainf–– programs in your browser.",
+      "path": "/miscellany/brainfuck",
+      "image": "/miscellany/brainfuck/preview.png"
+    },
+    {
+      "title": "Polycubes",
+      "year": 2018,
+      "description": "Examine polycubes in the browser.",
+      "path": "/miscellany/polycubes",
+      "image": "/miscellany/polycubes/preview.png"
+    },
+    {
+      "title": "Solubility rules",
+      "year": 2018,
+      "description": "Test yourself on heuristics for whether a salt is water soluble.",
+      "path": "/miscellany/solubility",
+      "image": "/miscellany/solubility/preview.png"
+    }
+  ]
+}
